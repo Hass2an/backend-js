@@ -19,4 +19,13 @@ app.use(express.static("public")); // Serves static files (e.g., PDFs and images
 app.use(cookieParser()); //Parses and manages cookies sent by clients in HTTP requests for reading and setting cookies.
 
 
+// route import
+
+import userRouter from "./routes/user.routes.js"
+
+// declearton of router
+
+app.use("/api/v1/users",userRouter)
+
+
 export {app}
